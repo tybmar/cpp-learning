@@ -1,13 +1,14 @@
 //Implement the following functions
-//void factorial(int a, int &result) ;    //Find factorial of a number and return that through a reference parameter
+//void Factorial(int value, int& result)
 
 #include <iostream>
 
 using namespace std;
 
-void factorial(int a, int &result)
+void Factorial(int value , int& result)
 {
-	for (size_t i = 1; i <= a; i++)
+	cout << "Silnia liczby: ";
+	for (size_t i = 1; i <= value; i++)
 	{
 		result *= i;
 	}
@@ -18,15 +19,11 @@ void factorial(int a, int &result)
 int main()
 {
 	int a = 0;
-
-	cout << "Silnia liczby: ";
-	cin >> a;
-
 	int silnia = 1;
-	int &result = silnia;
 
-	factorial(a, result);
-
+	cout << "Podaj liczbe: ";
+	cin >> a;
+	Factorial(a, silnia);
 
 	system("PAUSE");
 	return 0;
