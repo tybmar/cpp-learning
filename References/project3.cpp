@@ -1,33 +1,30 @@
 //Implement the following functions
-//void swap(int &a, int &b);            //Swap two numbers through reference arguments
+//void swap(int &x, int &y);            //Swap two numbers through reference arguments
 
 #include <iostream>
 using namespace std;
 
-void swap(int &a, int &b)
+void swap(int &x, int &y)
 {
 	int temp = 0; //tymczasowa zmienna do podmiany
-	temp = a;
-	a = b;
-	b = temp;
+	temp = x;
+	x = y;
+	y = temp;
 
-	cout << "Odwracamy liczby! " << a << " "<< b << endl;
+	cout << "Odwracamy liczby! " << x << " " << y << endl;
 }
 
 int main()
 {
-	int x = 0;
-	int y = 0;
+	int a = 0;
+	int b = 0;
 
 	cout << "Podaj 1sza liczbe: \n";
-	cin >> x;
+	cin >> a;
 	cout << "Podaj 2ga liczbe: \n";
-	cin >> y;
+	cin >> b;
 
-	int &a = x;
-	int &b = y;
-
-	swap(a,b);
+	swap(a, b);
 
 	system("PAUSE");
 	return 0;
