@@ -1,31 +1,30 @@
 //Implement the following functions
-//void add(int a,int b, int &result) ;    //Add two numbers and return the result through a reference parameter
+//void add(int &a,int &b);  
 
 
 #include <iostream>
 
 using namespace std;
 
-void add(int a, int b, int &result)
+void Add(int &a, int &b)
 {
-	cout << "Wynik dodawania to: " << result<< endl;
+	int sum = a + b;
+	cout << "Wynik dodawania to: " << sum << endl;
 }
 
 int main()
 {
 	int a = 0;
 	int b = 0;
+	int result = 0;
 
 	cout << "Podaj 1sza liczbe: \n";
 	cin >> a;
 	cout << "Podaj 2ga liczbe: \n";
 	cin >> b;
 
-	int wynik = a + b;
-	int &result = wynik;
+	Add(a, b);
 
-	add(a, b, result);
-
-	system("PAUSE");
+	system("pause");
 	return 0;
 }
